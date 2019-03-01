@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
     if (!req.query.url) {
         res.send("you should pass a url parameter")
     }
-    const filename = "./cache/" + sanitize(req.query.url)
+    const filename = "./cache/" + sanitize(req.query.url) + "-" +req.query.width + "-" + req.query.height
 
     const thumbnailResizer = sharp()
         .resize(req.query.width ? parseInt(req.query.width) : null, req.query.height ? parseInt(req.query.height) : null)
