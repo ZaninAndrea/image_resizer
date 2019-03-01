@@ -5,7 +5,7 @@
   "main": "resizer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node resizer.js"
+    "start": "mkdir cache; node resizer.js"
   },
   "author": "ZaninAndrea",
   "license": "ISC",
